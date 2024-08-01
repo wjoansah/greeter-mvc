@@ -13,8 +13,8 @@ pipeline {
                 success {
                     echo "[checkout]: successfully checked out code from vcs."
                 }
-                failed {
-                    echo "[checkout]: failed to checked out code from vcs."
+                failure {
+                    echo "[checkout]: failure to checked out code from vcs."
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline {
                 success {
                     echo "[tests]: successfully run all tests."
                 }
-                failed {
+                failure {
                     echo "[tests]: one or more tests failed."
                 }
             }
@@ -41,8 +41,8 @@ pipeline {
                 success {
                     echo "[build]: successfully built artifacts."
                 }
-                failed {
-                    echo "[build]: failed to build artifacts."
+                failure {
+                    echo "[build]: failure to build artifacts."
                 }
             }
         }
